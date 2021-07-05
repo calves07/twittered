@@ -7,6 +7,7 @@ import io.github.redouane59.twitter.dto.tweet.Tweet;
 import io.github.redouane59.twitter.dto.tweet.TweetV2.TweetData;
 import io.github.redouane59.twitter.helpers.ConverterHelper;
 import java.time.LocalDateTime;
+import java.io.Serializable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -23,7 +24,7 @@ import lombok.extern.slf4j.Slf4j;
 @AllArgsConstructor
 @NoArgsConstructor
 @Slf4j
-public class UserV2 implements User {
+public class UserV2 implements User, Serializable {
 
   private UserData          data;
   private UserData.Includes includes;
@@ -133,7 +134,7 @@ public class UserV2 implements User {
   @NoArgsConstructor
   @AllArgsConstructor
   @Builder
-  public static class UserData implements User {
+  public static class UserData implements User, Serializable {
 
     private String            id;
     @JsonProperty("created_at")

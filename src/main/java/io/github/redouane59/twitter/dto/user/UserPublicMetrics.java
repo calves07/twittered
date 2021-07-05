@@ -6,13 +6,14 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import java.io.Serializable;
 
 @Getter
 @Setter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserPublicMetrics {
+public class UserPublicMetrics implements Serializable {
 
   @JsonProperty("followers_count")
   private int followersCount;
