@@ -87,6 +87,11 @@ public interface ITwitterClientV1 {
   List<String> getFollowersIds(String userId);
 
   /**
+   * Returns a cursored collection of user IDs for every user following the specified user calling https://api.twitter.com/1.1/followers/ids.json
+   */
+  List<String> getFollowingIds(String userId);
+
+  /**
    * Get the relation between two users calling https://api.twitter.com/1.1/friendships/
    *
    * @param userId1 id of the first user
